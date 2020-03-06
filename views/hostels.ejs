@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hostels</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+  <style media="screen">
+
+
+      hr {
+     height: 30px;
+     border-style: solid;
+     border-color: #8c8b8b;
+     border-width: 1px 0 0 0;
+     border-radius: 20px;
+    }
+    hr:before {
+     display: block;
+     content: "";
+     height: 30px;
+     margin-top: -31px;
+     border-style: solid;
+     border-color: #8c8b8b;
+     border-width: 0 0 1px 0;
+     border-radius: 20px;
+    }
+    .container{
+      width: 100%;
+    }
+
+    body{
+      font-family: 'Ubuntu', sans-serif;
+      font-size : 20px;
+    }
+    .name{
+      background: #384B7B;
+      padding: 1%;
+      text-align: center;
+      font-size: 2em;
+      color: white;
+      width: 100%;
+      height: auto;
+    }
+
+    .info{
+      float: left;
+      width: 54%;
+      margin-top: 3%;
+    }
+
+    .clear{
+      clear: both;
+    }
+
+    #img1{
+      float: right;
+      width: 40%;
+      margin:  3%;
+      background: url("h1.jpg");
+      height: 400px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      border-radius: 8px;
+    }
+
+    #img0{
+      float: right;
+      width: 40%;
+      margin:  3%;
+      background: url("h0.jpg");
+      height: 400px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 8px;
+    }
+
+    #img2{
+      float: right;
+      width: 40%;
+      margin:  3%;
+      background: url("h2.jpg");
+      height: 400px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 8px;
+    }
+
+    #img3{
+      float: right;
+      width: 40%;
+      margin:  3%;
+      background: url("h3.jpg");
+      height: 400px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 8px;
+    }
+
+
+    .galleryh{
+      margin: 0.5%;
+      width: 98%;
+      height: auto;
+
+    }
+
+    .galleryc{
+      width: 22%;
+      float: left;
+      height: auto;
+      margin-left: 2%;
+      overflow: hidden;
+      border-radius: 10%;
+
+    }
+
+    .gallery{
+      width: 100%;
+      float: left;
+      height: auto;
+       border-radius: 10%;
+       transition: all 0.5s;
+    }
+
+    .gallery:hover{
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+
+    .gallery img{
+      width: 100%;
+      height: 200px;
+      border-radius: 10%;
+
+    }
+
+    .contacts{
+      width: 100%;
+      margin: auto;
+    }
+
+
+        .contactlist {
+      position: relative;
+      width: 8%;
+      float: left;
+      margin-left: 2%;
+      border-radius: 20%;
+      overflow: hidden;
+    }
+
+          .image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+        .overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: #008CBA;
+          overflow: hidden;
+          width: 100%;
+          height: 0;
+          transition: .5s ease;
+          opacity: 0.8;
+        }
+
+        .contactlist:hover .overlay {
+          height: 100%;
+        }
+
+        .text {
+          color: white;
+          font-size: 14px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+
+
+
+    .map {
+      background: url("map.png");
+      background-size: cover;
+        height: 400px;  /* The height is 400 pixels */
+        width: 60%; 
+        margin:auto;
+        border:2px solid black;/* The width is the width of the web page */
+       }
+
+       
+   		.header{
+   			background-color:#002147;
+   			height: auto;
+   			text-align: center;
+        margin-bottom: 1%;
+
+   		}
+   		.container1{
+   			width: 80%;
+   			margin: auto;
+   		}
+   	.cont1	p {
+   			border: 2px solid white;
+   			border-right: none;
+   			border-left: none;
+   			font-size: 1.3vw;
+   			color: white;
+   		}
+
+      .cont3	p {
+     			border: 2px solid white;
+     			border-right: none;
+     			border-left: none;
+     			font-size: 1.3vw;
+     			color: white;
+     		}
+   		.cont1, .cont3{
+   			width: 45%;
+   			float: left;
+   			margin-top: 2.4%;
+   		}
+   		.cont2{
+   			width: 10%;
+   			float: left;
+   		}
+
+   		img{
+   			width:6vw;
+   			height:6vw;
+   			display: block;
+   			margin-left: auto;
+   			margin-right: auto;
+   		}
+
+   		@media screen and (max-width: 1200px){
+   			.container1{
+   				width: 85%;
+   			}
+   			.cont1 p{
+   				font-size: 8px;
+        }
+        .cont3 p{
+   				font-size: 8px;
+   			}
+   		}
+
+    @media screen and (max-width: 600px) {
+      #img1{
+        width: 96%;
+        height: 300px;
+      }
+
+
+
+      #img0{
+        width: 96%;
+        height: 300px;
+      }
+
+      #img2{
+        width: 96%;
+        height: 300px;
+      }
+
+      #img3{
+        width: 96%;
+        height: 300px;
+      }
+
+      .info{
+        width: 100%;
+      }
+
+      .galleryc{
+        width: 80%;
+        margin-top: 2%;
+        margin-bottom: 1%;
+        clear: both;
+        margin-left: 10%;
+      }
+
+      .gallery img{
+        width: 100%;
+        margin: auto;
+      }
+
+      .contactlist {
+    width: 30%;
+    margin-top: 2%;
+    }
+
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="header">
+  		<div class="container1">
+  		<div class="cont1">
+  			<p>मालवीय राष्ट्रीय प्रौद्योगिकी संस्थान जयपुर</p>
+  		</div>
+  		<div class="cont2">
+  			<img src="https://img.collegepravesh.com/2014/05/MNIT-Jaipur-Logo.png">
+  		</div>
+  		<div class="cont3">
+  			<p>MALAVIYA NATIONAL INSTITUTE OF TECHNOLOGY</p>
+  		</div>
+  	</div>
+    <div class="clear">
+
+    </div>
+  	</div>
+
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Hostel 1</a></li>
+    <li><a data-toggle="tab" href="#menu1">Hostel 2</a></li>
+    <li><a data-toggle="tab" href="#menu2">Hostel 3</a></li>
+    <li><a data-toggle="tab" href="#menu3">Hostel 4</a></li
+    </div>
+  </ul>
+
+
+
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+        <div class ="name">Gargi Hostel</div>
+        <div id="img0"></div>
+        <div class="info">
+            <p>Hostels provide lower-priced, sociable accommodation where guests can rent a bed, usually a bunk bed, in a dormitory and share a bathroom, lounge and sometimes a kitchen. Rooms can be mixed or single-sex, and private rooms may also be available. In the 2010s, hostels often have wifi access.Hostels are often cheaper for both the operator and occupants than hotels; hostels may have long-term residents who they employ as desk agents or housekeeping staff in exchange for experience or discounted accommodation.In India, Pakistan and South Africa, hostel also refers to boarding schools or student dormitories in resident colleges and universities. In other parts of the world, the word hostel mainly refers to properties offering shared accommodation to travellers or backpackers..</p>
+            <p>These first youth hostels were an exponent of the vision of the German Youth Movement to let poor city youngsters breathe fresh air outdoors. The youths were supposed to manage the hostel themselves as much as possible, doing chores to keep the costs down and build character, and be physically active outdoors. Because of this, many youth hostels closed during the middle part of the day.</p>
+            <p><p>These first youth hostels were an exponent of the vision of the German Youth Movement to let poor city youngsters breathe fresh air outdoors.</p>
+       </div>
+        <div class="clear"></div>
+        <h2>Gallery</h2>
+        <hr>
+        <div class="galleryh">
+          <div class="galleryc">
+            <div class="gallery">
+                <img src="h01.jpg" alt="Cinque Terre">
+            </div>
+          </div>
+
+          <div class="galleryc">
+            <div class="gallery">
+                <img src="h03.jpg" alt="Forest" >
+            </div>
+          </div>
+
+          <div class="galleryc">
+            <div class="gallery">
+                <img src="h02.jpg" alt="Northern Lights" >
+            </div>
+          </div>
+
+          <div class="galleryc">
+            <div class="gallery">
+                <img src="h04.jpg" alt="Mountains" >
+            </div>
+          </div>
+
+          <div class="clear"></div>
+          </div>
+          <hr>
+          <h2> Mess</h2>
+              <p>The messes at Manipal Institute of Technology are run by the Chef on Wheels. It is one of a kind catering service that offers high quality & cost effective service. Our prime focus is to provide healthy and delicious food for everyone, anytime, anywhere. We believe that food served with warmth and the right attitude will leave a lasting impression in the minds of people being served. Our priority is to maintain a standard operating procedure, uniformly practiced across various sites with high emphasis on following food safety protocols and compliance with all statutory norms.</p>
+              <p>Our expertise in world cuisine and a dynamic delivery team comprising of specialized chefs and nutritionists, has been the cornerstone of our success in delivering high quality food services over the years. We also provide end to end catering solutions from equipment selection to kitchen set up and efficient operationalization. Most importantly any kind of harmful food additives are not used in food preparation.     </p>
+              <a href="#">MessMenu.pdf</a> <br>
+              <a href="#">Messinfo.pdf</a>
+          <hr>
+          <h2>Map</h2>
+          <div class="map"></div>
+          <hr>
+          <h2>Contacts</h2>
+          <div class="contacts">
+            <div class="contactlist">
+              <img src="av.png" alt="Avatar" class="image">
+              <div class="overlay">
+                <div class="text">Chief Warden<br> 987890373737</div>
+              </div>
+            </div>
+          <div class="contactlist">
+            <img src="av2.png" alt="Avatar" class="image">
+            <div class="overlay">
+              <div class="text">Hostel Warden<br> 987890373737</div>
+            </div>
+          </div>
+          <div class="contactlist">
+            <img src="av3.png" alt="Avatar" class="image">
+            <div class="overlay">
+              <div class="text">Care Taker<br> 987890373737</div>
+            </div>
+          </div>
+          <div class="contactlist">
+            <img src="av4.png" alt="Avatar" class="image">
+            <div class="overlay">
+              <div class="text">Mess Council<br> 987890373737</div>
+            </div>
+          </div>
+          <div class="clear"> </div>
+        </div>
+        <hr>
+    </div>
+
+
+    <div id="menu1" class="tab-pane fade">
+                  <div class ="name">Aurobindo Hostel</div>
+                  <div id="img1"></div>
+                  <div class="info">
+                      <p>Hostels provide lower-priced, sociable accommodation where guests can rent a bed, usually a bunk bed, in a dormitory and share a bathroom, lounge and sometimes a kitchen. Rooms can be mixed or single-sex, and private rooms may also be available. In the 2010s, hostels often have wifi access.Hostels are often cheaper for both the operator and occupants than hotels; hostels may have long-term residents who they employ as desk agents or housekeeping staff in exchange for experience or discounted accommodation.In India, Pakistan and South Africa, hostel also refers to boarding schools or student dormitories in resident colleges and universities. In other parts of the world, the word hostel mainly refers to properties offering shared accommodation to travellers or backpackers..</p>
+                      <p>These first youth hostels were an exponent of the vision of the German Youth Movement to let poor city youngsters breathe fresh air outdoors. The youths were supposed to manage the hostel themselves as much as possible, doing chores to keep the costs down and build character, and be physically active outdoors. Because of this, many youth hostels closed during the middle part of the day.</p>
+                      <p><p>These first youth hostels were an exponent of the vision of the German Youth Movement to let poor city youngsters breathe fresh air outdoors.</p>
+                 </div>
+                <div class="clear"></div>
+                <h2>Gallery</h2>
+                <hr>
+                <div class="galleryh">
+                  <div class="galleryc">
+                    <div class="gallery">
+                        <img src="h11.png" alt="Cinque Terre">
+                    </div>
+                  </div>
+
+                  <div class="galleryc">
+                    <div class="gallery">
+                        <img src="h13.jpg" alt="Forest" >
+                    </div>
+                  </div>
+
+                  <div class="galleryc">
+                    <div class="gallery">
+                        <img src="h12.jpg" alt="Northern Lights" >
+                    </div>
+                  </div>
+
+                  <div class="galleryc">
+                    <div class="gallery">
+                        <img src="h14.jpg" alt="Mountains" >
+                    </div>
+                  </div>
+
+                  <div class="clear"></div>
+              </div>
+              <hr>
+              <h2> Mess</h2>
+                  <p>The messes at Manipal Institute of Technology are run by the Chef on Wheels. It is one of a kind catering service that offers high quality & cost effective service. Our prime focus is to provide healthy and delicious food for everyone, anytime, anywhere. We believe that food served with warmth and the right attitude will leave a lasting impression in the minds of people being served. Our priority is to maintain a standard operating procedure, uniformly practiced across various sites with high emphasis on following food safety protocols and compliance with all statutory norms.</p>
+                  <p>Our expertise in world cuisine and a dynamic delivery team comprising of specialized chefs and nutritionists, has been the cornerstone of our success in delivering high quality food services over the years. We also provide end to end catering solutions from equipment selection to kitchen set up and efficient operationalization. Most importantly any kind of harmful food additives are not used in food preparation.     </p>
+                  <a href="#">MessMenu.pdf</a> <br>
+                  <a href="#">Messinfo.pdf</a>
+              <hr>
+              <h2>Map</h2>
+              <div class="map"></div>
+              <hr>
+              <h2>Contacts</h2>
+              <div class="contacts">
+                <div class="contactlist">
+                  <img src="av.png" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Chief Warden<br> 987890373737</div>
+                  </div>
+                </div>
+              <div class="contactlist">
+                <img src="av2.png" alt="Avatar" class="image">
+                <div class="overlay">
+                  <div class="text">Hostel Warden<br> 987890373737</div>
+                </div>
+              </div>
+              <div class="contactlist">
+                <img src="av3.png" alt="Avatar" class="image">
+                <div class="overlay">
+                  <div class="text">Care Taker<br> 987890373737</div>
+                </div>
+              </div>
+              <div class="contactlist">
+                <img src="av4.png" alt="Avatar" class="image">
+                <div class="overlay">
+                  <div class="text">Mess Council<br> 987890373737</div>
+                </div>
+              </div>
+              <div class="clear"> </div>
+        </div>
+        <hr>
+   </div>
+
+
+
+
+    <div id="menu2" class="tab-pane fade">
+
+          <div class ="name">Varun Hostel</div>
+          <div id="img2"></div>
+          <div class="info">
+              <p>Hostels provide lower-priced, sociable accommodation where guests can rent a bed, usually a bunk bed, in a dormitory and share a bathroom, lounge and sometimes a kitchen. Rooms can be mixed or single-sex, and private rooms may also be available. In the 2010s, hostels often have wifi access.Hostels are often cheaper for both the operator and occupants than hotels; hostels may have long-term residents who they employ as desk agents or housekeeping staff in exchange for experience or discounted accommodation.In India, Pakistan and South Africa, hostel also refers to boarding schools or student dormitories in resident colleges and universities. In other parts of the world, the word hostel mainly refers to properties offering shared accommodation to travellers or backpackers..</p>
+              <p>These first youth hostels were an exponent of the vision of the German Youth Movement to let poor city youngsters breathe fresh air outdoors. The youths were supposed to manage the hostel themselves as much as possible, doing chores to keep the costs down and build character, and be physically active outdoors. Because of this, many youth hostels closed during the middle part of the day.</p>
+              <p><p>These first youth hostels were an exponent of the vision of the German Youth Movement to let poor city youngsters breathe fresh air outdoors.</p>
+         </div>
+        <div class="clear"></div>
+        <h2>Gallery</h2>
+        <hr>
+        <div class="galleryh">
+          <div class="galleryc">
+            <div class="gallery">
+                <img src="h21.jpg" alt="Cinque Terre">
+            </div>
+          </div>
+
+          <div class="galleryc">
+            <div class="gallery">
+                <img src="h23.jpg" alt="Forest" >
+            </div>
+          </div>
+
+          <div class="galleryc">
+            <div class="gallery">
+                <img src="h22.jpg" alt="Northern Lights" >
+            </div>
+          </div>
+
+          <div class="galleryc">
+            <div class="gallery">
+                <img src="h24.png" alt="Mountains" >
+            </div>
+          </div>
+
+          <div class="clear"></div>
+      </div>
+      <hr>
+      <h2> Mess</h2>
+          <p>The messes at Manipal Institute of Technology are run by the Chef on Wheels. It is one of a kind catering service that offers high quality & cost effective service. Our prime focus is to provide healthy and delicious food for everyone, anytime, anywhere. We believe that food served with warmth and the right attitude will leave a lasting impression in the minds of people being served. Our priority is to maintain a standard operating procedure, uniformly practiced across various sites with high emphasis on following food safety protocols and compliance with all statutory norms.</p>
+          <p>Our expertise in world cuisine and a dynamic delivery team comprising of specialized chefs and nutritionists, has been the cornerstone of our success in delivering high quality food services over the years. We also provide end to end catering solutions from equipment selection to kitchen set up and efficient operationalization. Most importantly any kind of harmful food additives are not used in food preparation.     </p>
+          <a href="#">MessMenu.pdf</a> <br>
+          <a href="#">Messinfo.pdf</a>
+      <hr>
+      <h2>Map</h2>
+      <div class="map"></div>
+      <hr>
+      <h2>Contacts</h2>
+      <div class="contacts">
+        <div class="contactlist">
+          <img src="av.png" alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text">Chief Warden<br> 987890373737</div>
+          </div>
+        </div>
+        <div class="contactlist">
+          <img src="av2.png" alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text">Hostel Warden<br> 987890373737</div>
+          </div>
+        </div>
+        <div class="contactlist">
+          <img src="av3.png" alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text">Care Taker<br> 987890373737</div>
+          </div>
+        </div>
+        <div class="contactlist">
+          <img src="av4.png" alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text">Mess Council<br> 987890373737</div>
+          </div>
+        </div>
+        <div class="clear"> </div>
+      </div>
+      <hr>
+    </div>
+
+
+
+    <div id="menu3" class="tab-pane fade">
+          <div class ="name">Drona Hostel</div>
+          <div id="img3"></div>
+          <div class="info">
+              <p>Hostels provide lower-priced, sociable accommodation where guests can rent a bed, usually a bunk bed, in a dormitory and share a bathroom, lounge and sometimes a kitchen. Rooms can be mixed or single-sex, and private rooms may also be available. In the 2010s, hostels often have wifi access.Hostels are often cheaper for both the operator and occupants than hotels; hostels may have long-term residents who they employ as desk agents or housekeeping staff in exchange for experience or discounted accommodation.In India, Pakistan and South Africa, hostel also refers to boarding schools or student dormitories in resident colleges and universities. In other parts of the world, the word hostel mainly refers to properties offering shared accommodation to travellers or backpackers..</p>
+              <p>These first youth hostels were an exponent of the vision of the German Youth Movement to let poor city youngsters breathe fresh air outdoors. The youths were supposed to manage the hostel themselves as much as possible, doing chores to keep the costs down and build character, and be physically active outdoors. Because of this, many youth hostels closed during the middle part of the day.</p>
+              <p><p>These first youth hostels were an exponent of the vision of the German Youth Movement to let poor city youngsters breathe fresh air outdoors.</p>
+         </div>
+        <div class="clear"></div>
+        <h2>Gallery</h2>
+        <hr>
+        <div class="galleryh">
+          <div class="galleryc">
+            <div class="gallery">
+                <img src="h3.jpg" alt="Cinque Terre">
+            </div>
+          </div>
+
+          <div class="galleryc">
+            <div class="gallery">
+                <img src="h33.jpg" alt="Forest" >
+            </div>
+          </div>
+
+          <div class="galleryc">
+            <div class="gallery">
+                <img src="h32.jpg" alt="Northern Lights" >
+            </div>
+          </div>
+
+          <div class="galleryc">
+            <div class="gallery">
+                <img src="h34.jpg" alt="Mountains" >
+            </div>
+          </div>
+
+          <div class="clear"></div>
+      </div>
+      <hr>
+      <h2> Mess</h2>
+        <p>The messes at Manipal Institute of Technology are run by the Chef on Wheels. It is one of a kind catering service that offers high quality & cost effective service. Our prime focus is to provide healthy and delicious food for everyone, anytime, anywhere. We believe that food served with warmth and the right attitude will leave a lasting impression in the minds of people being served. Our priority is to maintain a standard operating procedure, uniformly practiced across various sites with high emphasis on following food safety protocols and compliance with all statutory norms.</p>
+        <p>Our expertise in world cuisine and a dynamic delivery team comprising of specialized chefs and nutritionists, has been the cornerstone of our success in delivering high quality food services over the years. We also provide end to end catering solutions from equipment selection to kitchen set up and efficient operationalization. Most importantly any kind of harmful food additives are not used in food preparation.     </p>
+        <a href="#">MessMenu.pdf</a> <br>
+        <a href="#">Messinfo.pdf</a>
+      <hr>
+      <h2>Map</h2>
+      <div class="map"></div>
+      <hr>
+      <h2>Contacts</h2>
+      <div class="contacts">
+        <div class="contactlist">
+          <img src="av.png" alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text">Chief Warden<br> 987890373737</div>
+          </div>
+        </div>
+        <div class="contactlist">
+          <img src="av2.png" alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text">Hostel Warden<br> 987890373737</div>
+          </div>
+        </div>
+        <div class="contactlist">
+          <img src="av3.png" alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text">Care Taker<br> 987890373737</div>
+          </div>
+        </div>
+        <div class="contactlist">
+          <img src="av4.png" alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text">Mess Council<br> 987890373737</div>
+          </div>
+        </div>
+        <div class="clear"> </div>
+      </div>
+      <hr>
+  </div>
+
+
+
+
+
+  </div>
+</div>
+
+
+</body>
+</html>
